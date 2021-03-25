@@ -1,0 +1,56 @@
+Test2:
+Resources:
+
+Printer, 1
+Scanner, 1
+
+Script:
+
+User1:
+write-request-b Printer_0
+sleep 50
+disable Scanner_0
+write-release Printer_0
+
+User2:
+
+read-request-n Scanner_0
+sleep 100
+read-release Scanner_0 | write-request-b Printer_0
+write-release Printer_0
+
+
+
+Simulation Output:
+
+Printer_0 was added to $c
+Printer_0 (managed by $c) is now ENABLED
+Scanner_0 was added to $e
+Scanner_0 (managed by $e) is now ENABLED
+User Starting: $d
+User Starting: $f
+$e received CONCURRENT_READ_NONBLOCKING request for Scanner_0 from $f
+$c received EXCLUSIVE_WRITE_BLOCKING request for Printer_0 from $d
+$e granted CONCURRENT_READ_NONBLOCKING request for Scanner_0 to $f
+$c granted EXCLUSIVE_WRITE_BLOCKING request for Printer_0 to $d
+$c received DISABLE Scanner_0 request from $d
+$c discovered that Scanner_0 is managed by $e
+$c forwarded DISABLE Scanner_0 request to $e
+$e received DISABLE Scanner_0 request from $d
+$e received Release CONCURRENT_READ access to Scanner_0 from $f
+$f released CONCURRENT_READ access to Scanner_0 (managed by $e)
+Scanner_0 (managed by $e) is now DISABLED
+$e granted DISABLE Scanner_0 request to $d
+$e received EXCLUSIVE_WRITE_BLOCKING request for Printer_0 from $f
+$e discovered that Printer_0 is managed by $c
+$e forwarded EXCLUSIVE_WRITE_BLOCKING request for Printer_0 to $c
+User Terminating: $d
+$c received EXCLUSIVE_WRITE_BLOCKING request for Printer_0 from $f
+$c received Release EXCLUSIVE_WRITE access to Printer_0 from $d
+$d released EXCLUSIVE_WRITE access to Printer_0 (managed by $c)
+$c granted EXCLUSIVE_WRITE_BLOCKING request for Printer_0 to $f
+User Terminating: $f
+$e received Release EXCLUSIVE_WRITE access to Printer_0 from $f
+$e forwarded Release EXCLUSIVE_WRITE access to Printer_0 to $c
+$c received Release EXCLUSIVE_WRITE access to Printer_0 from $f
+$f released EXCLUSIVE_WRITE access to Printer_0 (managed by $c)

@@ -1,0 +1,33 @@
+Test2:
+Resources:
+
+Printer, 1
+
+Script:
+
+User1:
+disable Printer_0
+write-request-b Printer_0
+enable Printer_0
+write-request-b Printer_0
+write-release Printer_0
+
+
+Simulation Output:
+
+Printer_0 was added to $c
+Printer_0 (managed by $c) is now ENABLED
+User Starting: $d
+$c received DISABLE Printer_0 request from $d
+Printer_0 (managed by $c) is now DISABLED
+$c granted DISABLE Printer_0 request to $d
+$c received EXCLUSIVE_WRITE_BLOCKING request for Printer_0 from $d
+$c denied EXCLUSIVE_WRITE_BLOCKING request for Printer_0 to $d because RESOURCE_DISABLED
+$c received ENABLE Printer_0 request from $d
+Printer_0 (managed by $c) is now ENABLED
+$c granted ENABLE Printer_0 request to $d
+$c received EXCLUSIVE_WRITE_BLOCKING request for Printer_0 from $d
+$c granted EXCLUSIVE_WRITE_BLOCKING request for Printer_0 to $d
+User Terminating: $d
+$c received Release EXCLUSIVE_WRITE access to Printer_0 from $d
+$d released EXCLUSIVE_WRITE access to Printer_0 (managed by $c)
