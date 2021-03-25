@@ -1,0 +1,101 @@
+<component name="libraryTable">
+  <library name="junit-4.12">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/junit-4.12.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/hamcrest-core-1.3.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../../.." />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/ForRance/project4-spring2013-433-canonical/doc" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/maze_generate/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p0-master/p0/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p1-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p2-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p3-canon/p3/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p3-canon/project3-canon/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p3-canon/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p4-canon/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433-master/p5-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/Akka BST/akka-bst/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/Akka BST/p4/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/ForRance/project4-spring2013-433-canonical/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/Spring 2016/p1-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/maze_generate/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/p1-source/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/p2-modified/src" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC433/p3-source" />
+      <root url="file://$PROJECT_DIR$/../../../../CMSC701.P1/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Desktop/p4/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Desktop/tutorials/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p0-master/p0/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p1-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p2-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p3-canon/p3/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p3-canon/project3-canon/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p3-canon/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p4-canon/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433-master/p5-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433/Akka BST/akka-bst/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC433/Akka BST/p4/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/CMSC701.P1/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/Scribble/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/akka-bst/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/akka-tutorial/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/lec02/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/lec03/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/lec04/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p0/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p1-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p1/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p2-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p2-modified/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p2/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p3/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p4-bst/src" />
+      <root url="file://$PROJECT_DIR$/../../../Mac Backup/Documents/workspace/p4/src" />
+      <root url="file://$PROJECT_DIR$/../../CMSC422/Projects/p3/libsvm-3.21/java" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p0-master/p0/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p1-master/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p2-master/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p3-canon/p3/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p3-canon/project3-canon/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p3-canon/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p4-canon/src" />
+      <root url="file://$PROJECT_DIR$/../CMSC433-master/p5-master/src" />
+      <root url="file://$PROJECT_DIR$/src" />
+      <root url="file://$PROJECT_DIR$/../p4-solution GC/src" />
+      <root url="file://$PROJECT_DIR$/../p4-solution-old/src" />
+      <root url="file://$PROJECT_DIR$/../p4-solution/src" />
+      <root url="file://$PROJECT_DIR$/../p4/src" />
+      <root url="file://$PROJECT_DIR$/../../CMSC701/bowtie/src" />
+      <root url="file://$PROJECT_DIR$/../../CMSC818G/telecom/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../../../Scribble/src" />
+      <root url="file://$PROJECT_DIR$/../../../../hibernate-tutorials/annotations/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../../../hibernate-tutorials/basic/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../../../hibernate-tutorials/entitymanager/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../../../hibernate-tutorials/envers/src/test/java" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/P4-GC/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/akka-bst/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/akka-tutorial/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/lec02/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/lec03/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/lec04/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/lec19/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p0/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p1-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p1/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p2-master/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p2-modified/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p2/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p3/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p4 old/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p4-bst/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p4-solution/src" />
+      <root url="file://$PROJECT_DIR$/../../../../workspace/p4/src" />
+      <root url="file://$PROJECT_DIR$/../../../.." />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/../../../.." recursive="false" type="SOURCES" />
+  </library>
+</component>
