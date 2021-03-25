@@ -1,5 +1,6 @@
+## Project 2 – Ratsie’s Simulation
 
-In this project, I implemented src/cmsc433/Cook.java, src/cmsc433/Customer.java, src/cmsc433/Kitchen.java, src/cmsc433/Machines.java, src/cmsc433/Orders.java, and src/cmsc433/Resturant.java
+**For this project, I implemented src/cmsc433/Cook.java, src/cmsc433/Customer.java, src/cmsc433/Kitchen.java, src/cmsc433/Machines.java, src/cmsc433/Orders.java, and src/cmsc433/Resturant.java**
 
 # Goal. 
 In this project, you will write a simulation for (a highly simplified) Ratsie’s (-like
