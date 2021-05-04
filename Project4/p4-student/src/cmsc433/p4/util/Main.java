@@ -33,7 +33,7 @@ public class Main {
 		// Create actor system and instantiate a simulation manager.
 				
 		ActorSystem system = ActorSystem.create("Simulation");
-		ArrayList<NodeSpecification> nodes = setupTest1();
+		ArrayList<NodeSpecification> nodes = setupTest2();
 		ActorRef simulationManager = SimulationManagerActor.makeSimulationManager(nodes, system);
 		
 		// Start simulation manager and retrieve result
