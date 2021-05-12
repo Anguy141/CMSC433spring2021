@@ -1,0 +1,3 @@
+# I here assume that this computer has 40 "physical" cores.
+# If you want to specify more cores, you can change the number "40" below.
+localhost slots=40
