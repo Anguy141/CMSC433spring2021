@@ -1,7 +1,7 @@
 package cmsc433.p1;
 
 /**
- *  @author 
+ *  @author Anh-Minh Nguyen
  */
 
 
