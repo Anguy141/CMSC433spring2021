@@ -135,32 +135,28 @@ public class AuctionServer
 		//   Don't forget to increment the number of things the seller has currently listed.
 		synchronized (instanceLock) {
 			// if items per seller or items in server is max, return -1.
-			
-				if ((itemsPerSeller.containsKey(sellerName) 
-						&& itemsPerSeller.get(sellerName) >= maxSellerItems) 
-						|| itemsUpForBidding.size() >= serverCapacity) {
-					//System.out.println(itemsUpForBidding.size());
-					return -1;
-				} else {
-					// making and adding item to list
-					int currID = lastListingID += 1;
-					Item currItem = new Item(sellerName, itemName, currID,
-							lowestBiddingPrice, biddingDurationMs);
+			if ((itemsPerSeller.containsKey(sellerName) 
+					&& itemsPerSeller.get(sellerName) >= maxSellerItems) 
+					|| itemsUpForBidding.size() >= serverCapacity) {
+				return -1;
+			} else {
+				// making and adding item to list
+				int currID = lastListingID += 1;
+				Item currItem = new Item(sellerName, itemName, currID,
+						lowestBiddingPrice, biddingDurationMs);
 				
-					itemsUpForBidding.add(currItem);
-					itemsAndIDs.put(currID, currItem);
-					highestBids.put(currID, lowestBiddingPrice);
-					//System.out.println(currItem.toString());
+				itemsUpForBidding.add(currItem);
+				itemsAndIDs.put(currID, currItem);
+				highestBids.put(currID, lowestBiddingPrice);
 
-					// if new seller, then number of items is 1. else number of item + 1
-					if (!itemsPerSeller.containsKey(sellerName)) {
-						itemsPerSeller.put(sellerName, 1);
-					} else {
-						itemsPerSeller.put(sellerName, itemsPerSeller.get(sellerName) + 1);
-					}
-					return currID; // returns unique item ID
+				// if new seller, then number of items is 1. else number of item + 1
+				if (!itemsPerSeller.containsKey(sellerName)) {
+					itemsPerSeller.put(sellerName, 1);
+				} else {
+					itemsPerSeller.put(sellerName, itemsPerSeller.get(sellerName) + 1);
 				}
-			
+				return currID; // returns unique item ID
+			}	
 		}
 	}
 
