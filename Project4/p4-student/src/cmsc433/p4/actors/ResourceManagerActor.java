@@ -49,7 +49,6 @@ public class ResourceManagerActor extends AbstractActor {
 	 */
 	public void log(LogMsg msg) {
 		logger.tell(msg, getSelf());
-		// System.out.println(msg.toString());
 	}
 
 	/**
@@ -92,7 +91,7 @@ public class ResourceManagerActor extends AbstractActor {
 	 */
 
 	public void onReceive(Object msg) throws Exception {
-		if (msg instanceof AddInitialLocalResourcesRequestMsg) { // should be fine
+		if (msg instanceof AddInitialLocalResourcesRequestMsg) {
 			AddInitialLocalResourcesRequestMsg payload = (AddInitialLocalResourcesRequestMsg) msg;
 			for (Resource r : payload.getLocalResources()) {
 
@@ -105,7 +104,7 @@ public class ResourceManagerActor extends AbstractActor {
 			AddInitialLocalResourcesResponseMsg response = new AddInitialLocalResourcesResponseMsg(payload);
 			getSender().tell(response, getSelf());
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		} else if (msg instanceof WhoHasResourceRequestMsg) { // Should be fine
+		} else if (msg instanceof WhoHasResourceRequestMsg) {
 			WhoHasResourceRequestMsg payload = (WhoHasResourceRequestMsg) msg;
 			AccessRequestMsg reqMsg = payload.getAccessRequestMsg();
 			AccessReleaseMsg relMsg = payload.getAccessReleaseMsg();
@@ -120,7 +119,7 @@ public class ResourceManagerActor extends AbstractActor {
 					relMsg, manMsg);
 			getSender().tell(response, getSelf());
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		} else if (msg instanceof WhoHasResourceResponseMsg) { // Should be fine
+		} else if (msg instanceof WhoHasResourceResponseMsg) {
 			WhoHasResourceResponseMsg payload = (WhoHasResourceResponseMsg) msg;
 			AccessRequestMsg reqMsg = payload.getAccessRequestMsg();
 			AccessReleaseMsg relMsg = payload.getAccessReleaseMsg();
@@ -168,7 +167,7 @@ public class ResourceManagerActor extends AbstractActor {
 			}
 
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		} else if (msg instanceof AddLocalUsersRequestMsg) { // Dont log
+		} else if (msg instanceof AddLocalUsersRequestMsg) {
 			AddLocalUsersRequestMsg payload = (AddLocalUsersRequestMsg) msg;
 			for (ActorRef a : payload.getLocalUsers()) {
 				localUsers.add(a);
@@ -176,10 +175,10 @@ public class ResourceManagerActor extends AbstractActor {
 			AddLocalUsersResponseMsg response = new AddLocalUsersResponseMsg(payload);
 			getSender().tell(response, getSelf());
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		} else if (msg instanceof AddRemoteManagersRequestMsg) { // Should be fine
+		} else if (msg instanceof AddRemoteManagersRequestMsg) {
 			AddRemoteManagersRequestMsg payload = (AddRemoteManagersRequestMsg) msg;
 			for (ActorRef a : payload.getManagerList()) {
-				if (!a.equals(getSelf())) { // dont want to add the own manger in remoteManager
+				if (!a.equals(getSelf())) {
 					remoteManagers.add(a);
 				}
 			}
@@ -199,7 +198,6 @@ public class ResourceManagerActor extends AbstractActor {
 				Resource localResource = localResources.get(resourceName);
 				if (mrType == ManagementRequestType.ENABLE) {
 
-					// if (localResource.getStatus() == ResourceStatus.DISABLED) {
 					localResource.enable();
 
 					log(LogMsg.makeResourceStatusChangedLogMsg(getSelf(), localResource.getName(),
@@ -209,7 +207,7 @@ public class ResourceManagerActor extends AbstractActor {
 
 					ManagementRequestGrantedMsg response = new ManagementRequestGrantedMsg(request);
 					replyTo.tell(response, getSelf());
-					// }
+
 
 				} else if (mrType == ManagementRequestType.DISABLE) {
 					if (isUserAReadOwner(resourceName, replyTo) || isUserWriteOwner(resourceName, replyTo)) {
@@ -247,7 +245,6 @@ public class ResourceManagerActor extends AbstractActor {
 					}
 				}
 			} else {
-				//System.out.println("not local");
 				if (nonLocalResource.containsKey(resourceName)) {
 					ActorRef owner = nonLocalResource.get(resourceName);
 					log(LogMsg.makeManagementRequestForwardedLogMsg(getSelf(), owner, payload.getRequest()));
@@ -324,7 +321,7 @@ public class ResourceManagerActor extends AbstractActor {
 				processresourcesPendingRequests(resourceName);
 
 			} else {
-				//System.out.println("not local");
+
 				if (nonLocalResource.containsKey(resourceName)) {
 					ActorRef owner = nonLocalResource.get(resourceName);
 					log(LogMsg.makeAccessReleaseForwardedLogMsg(getSelf(), owner, payload.getAccessRelease()));
@@ -339,7 +336,7 @@ public class ResourceManagerActor extends AbstractActor {
 				}
 			}
 			////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-		} else if (msg instanceof AccessRequestMsg) { // should be okay
+		} else if (msg instanceof AccessRequestMsg) {
 			AccessRequestMsg payload = (AccessRequestMsg) msg;
 			AccessRequest request = payload.getAccessRequest();
 			AccessRequestType accessType = request.getType();
@@ -506,7 +503,7 @@ public class ResourceManagerActor extends AbstractActor {
 						replyTo.tell(response, getSelf());
 					}
 				}
-			} else { // resource not local
+			} else {
 				if (nonLocalResource.containsKey(resourceName)) {
 					ActorRef owner = nonLocalResource.get(resourceName);
 					log(LogMsg.makeAccessRequestForwardedLogMsg(getSelf(), owner, payload.getAccessRequest()));
